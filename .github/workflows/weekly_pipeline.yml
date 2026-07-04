@@ -1,0 +1,29 @@
+name: Weekly Bestseller Pipeline
+
+on: 
+  schedule:
+    - cron: '0 21 * * 0'
+  workflow_dispatch:
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          RAINFOREST_API_KEY: ${{ secrets.RAINFOREST_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          PIPELINE_MODE: live
+        run: Python main.py

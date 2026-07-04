@@ -1,0 +1,19 @@
+echo ".env" >> .gitignore
+echo "venv/" >> .gitignore
+echo "__pycache__/" >> .gitignore
+
+# Ignore the Python virtual environment
+venv/
+.venv/
+ENV/
+
+# Ignore cache files
+__pycache__/
+*.pyc
+
+# Ignore local environment variables configuration
+.env
+
+# Optional: Ignore massive raw data dumps if they slow down Git
+data/mock/
+*.sqlite3
