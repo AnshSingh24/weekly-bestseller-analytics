@@ -1,19 +1,55 @@
-echo ".env" >> .gitignore
-echo "venv/" >> .gitignore
-echo "__pycache__/" >> .gitignore
-
-# Ignore the Python virtual environment
+# ====================================================================
+# Python Dependencies & Virtual Environments
+# ====================================================================
+# Blocks thousands of library dependency files from tracking
 venv/
 .venv/
+env/
 ENV/
 
-# Ignore cache files
+# Python Byte-compiled / cache files
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
 
-# Ignore local environment variables configuration
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+
+# ====================================================================
+# Streamlit Configuration & Front-end Cache
+# ====================================================================
+# Keeps your layout clean and ignores runtime styling caches
+.streamlit/
+
+# ====================================================================
+# Environment Secrets & Local Databases
+# ====================================================================
+# CRITICAL: Protects database passwords, connection strings, and API tokens
 .env
-
-# Optional: Ignore massive raw data dumps if they slow down Git
-data/mock/
+*.sql
 *.sqlite3
+
+# ====================================================================
+# Operating System & IDE Artifacts (WSL / Windows Interop)
+# ====================================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
