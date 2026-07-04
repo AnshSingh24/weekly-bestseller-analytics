@@ -26,4 +26,4 @@ jobs:
           RAINFOREST_API_KEY: ${{ secrets.RAINFOREST_API_KEY }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           PIPELINE_MODE: live
-        run: Python main.py
+        run: python main.py
