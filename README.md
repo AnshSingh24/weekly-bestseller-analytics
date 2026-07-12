@@ -83,7 +83,7 @@ efficient historical queries without data duplication.
 
 **1. Clone and set up environment:**
 ```bash
-git clone https://github.com/your-username/weekly-bestseller-analytics
+git clone https://github.com/AnshSingh24/weekly-bestseller-analytics
 cd weekly-bestseller-analytics
 python -m venv venv
 source venv/bin/activate
