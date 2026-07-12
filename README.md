@@ -92,8 +92,8 @@ pip install -r requirements.txt
 
 **2. Create `.env` file:**
 
-RAINFOREST_API_KEY=your_key_here
-DATABASE_URL=your_neon_connection_string
+RAINFOREST_API_KEY=your_key_here (https://app.rainforestapi.com/playground)
+DATABASE_URL=your_neon_connection_string (https://neon.com/)
 
 **3. Run in demo mode (no API credits used):**
 ```bash
